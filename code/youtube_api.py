@@ -1,10 +1,9 @@
 from IPython.display import clear_output
 from apiclient.discovery import build
-
+import pandas as pd
 
 API_KEY = open('google-api-key.txt', 'r').read()
 youtube_service = build('youtube', 'v3', developerKey=API_KEY)
-
 
 def download_channel_videos(channel):
     """
@@ -15,6 +14,7 @@ def download_channel_videos(channel):
     pageToken = None
     while True:
         response = youtube_service.playlistItems().list(playlistId=channel['playlist_id'], part="snippet", pageToken=pageToken).execute()
+        """ response = youtube_service.playlistItems().list(playlistId="UUXIJgqnII2ZOINSWNOGFThA", part="snippet", pageToken=pageToken).execute()"""
         for video in response['items']:
             videos.append({
                 'youtube_id': video['snippet']['resourceId']['videoId'],
@@ -25,13 +25,12 @@ def download_channel_videos(channel):
             })
         pageToken = response.get("nextPageToken")
         clear_output(wait=True)
-        print 'Downloading videos from "{}": {}...'.format(channel['title'], len(videos))
+        print('Downloading videos from "{}": {}...'.format(channel['title'], len(videos)))
         if pageToken is None:
             # There are no more videos to download
             clear_output()
             break
     return videos
-
 
 def download_channels_videos(channels):
     """
@@ -40,12 +39,11 @@ def download_channels_videos(channels):
     with that information for each channel.
     """
     for _, channel in channels.iterrows():
-        videos = download_videos(channel)
+        videos = download_channel_videos(channel)
         df = pd.DataFrame.from_records(videos)
         output_file = 'videos-{}.csv'.format(channel['slug'])
         df.to_csv(output_file, index=False, encoding='utf-8')
-        print "Generated file: %s" % output_file
-        
+        print("Generated file: %s" % output_file)
 
 def merge_channel_videos(channels, output_file='videos-MERGED.csv'):
     """
@@ -62,4 +60,4 @@ def merge_channel_videos(channels, output_file='videos-MERGED.csv'):
     videos['description'].fillna('', inplace=True)
     videos.dropna(inplace=True)
     videos.to_csv(output_file, index=False, encoding='utf-8')
-    print "Channel videos merged into %s" % output_file
+    print("Channel videos merged into %s" % output_file)
