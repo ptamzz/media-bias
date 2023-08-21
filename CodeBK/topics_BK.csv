@@ -1,0 +1,7 @@
+topics = pandas.DataFrame.from_records([
+    {'title': 'Meitei', 'slug': 'meitei', 'variant1': 'Meetei', 'variant2': 'Maiti'},
+    {'title': 'Kuki', 'slug': 'kuki',   'variant1': 'kuki', 'variant2': 'cookie'},
+    {'title': 'Biren', 'slug': 'biren',   'variant1': 'biren', 'variant2': 'biren'},
+])
+
+topics.to_csv('topics.csv', index=False, encoding='utf-8')

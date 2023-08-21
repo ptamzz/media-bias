@@ -1,0 +1,18 @@
+channels = pandas.DataFrame.from_records([
+    {'title': 'The Wire', 'slug': 'the-wire', 'youtube_id': 'UChWtJey46brNr7qHQpN6KLQ', 'playlist_id': 'UUhWtJey46brNr7qHQpN6KLQ', 'url': 'https://www.youtube.com/@TheWireNews', 'coverage': 'national', 'color': '#5975a4'},
+    {'title': 'India Today NE', 'slug': 'india-today-ne', 'youtube_id': 'UCg1nNKwJIeVUhxbtmqfVmgg', 'playlist_id': 'UUg1nNKwJIeVUhxbtmqfVmgg', 'url': 'https://www.youtube.com/@indiatodayne', 'coverage': 'national', 'color': '#EADDFF'},
+    {'title': 'India Today', 'slug': 'india-today', 'youtube_id': 'UCYPvAwZP8pZhSMW8qs7cVCw', 'playlist_id': 'UUYPvAwZP8pZhSMW8qs7cVCw', 'url': 'https://www.youtube.com/@indiatoday', 'coverage': 'national', 'color': '#B69DF8'},
+    {'title': 'East Mojo', 'slug': 'east-mojo', 'youtube_id': 'UC3zMA8hCzeB8ldnFVGX1NFA', 'playlist_id': 'UU3zMA8hCzeB8ldnFVGX1NFA', 'url': 'https://www.youtube.com/@EastMojoOfficial', 'coverage': 'national', 'color': '#7F67BE'},
+    {'title': 'Mojo Story', 'slug': 'mojo-story', 'youtube_id': 'UCrdPiSPVW0rtRsI002BX8iw', 'playlist_id': 'UUrdPiSPVW0rtRsI002BX8iw', 'url': 'https://www.youtube.com/@mojostory', 'coverage': 'national', 'color': '#4F378B'},
+    {'title': 'News Laundry', 'slug': 'news-laundry', 'youtube_id': 'UCustbySVJGb659WDpdkeATg', 'playlist_id': 'UUustbySVJGb659WDpdkeATg', 'url': 'https://www.youtube.com/@newslaundry', 'coverage': 'national', 'color': '#F6EDFF'},
+    {'title': 'Al Jazeera Engligh', 'slug': 'al-jazeera-english', 'youtube_id': 'UCNye-wNBqNL5ZzHSJj3l8Bg', 'playlist_id': 'UUNye-wNBqNL5ZzHSJj3l8Bg', 'url': 'https://www.youtube.com/@aljazeeraenglish', 'coverage': 'national', 'color': '#B0A7C0'},
+    {'title': 'Channel 4 News', 'slug': 'channel-4-news', 'youtube_id': 'UCTrQ7HXWRRxr7OsOtodr2_w', 'playlist_id': 'UUTrQ7HXWRRxr7OsOtodr2_w', 'url': 'https://www.youtube.com/@Channel4News', 'coverage': 'international', 'color': '#7A7289'},
+    {'title': 'CNN News 18', 'slug': 'cnnnews18', 'youtube_id': 'UCef1-8eOpJgud7szVPlZQAQ', 'playlist_id': 'UUef1-8eOpJgud7szVPlZQAQ', 'url': 'https://www.youtube.com/@cnnnews18', 'color': '#D29DAC'},
+    {'title': 'DW News', 'slug': 'dw-news', 'youtube_id': 'UCknLrEdhRCp1aegoMqRaCZg', 'playlist_id': 'UUknLrEdhRCp1aegoMqRaCZg', 'url': 'https://www.youtube.com/@dwnews', 'coverage': 'international', 'color': '#633B48'},
+    {'title': 'The Print', 'slug': 'the-print', 'youtube_id': 'UCuyRsHZILrU7ZDIAbGASHdA', 'playlist_id': 'UUuyRsHZILrU7ZDIAbGASHdA', 'url': 'ThePrintIndia', 'coverage': 'national', 'color': '#EC928E'},
+    {'title': 'BBC News India', 'slug': 'bbc-news-india', 'youtube_id': 'UCF4QKhPMP1JybbkIJzIayww', 'playlist_id': 'UUF4QKhPMP1JybbkIJzIayww', 'url': 'https://www.youtube.com/@bbcnewsindia', 'coverage': 'national', 'color': '#DC362E'},
+    {'title': 'Indian Express', 'slug': 'indianexpress', 'youtube_id': 'UCJEDFSxHHOW1PpBccdSxOTA', 'playlist_id': 'UUJEDFSxHHOW1PpBccdSxOTA', 'url': 'https://www.youtube.com/@indianexpress', 'coverage': 'national', 'color': '#219653'},
+    {'title': 'WION', 'slug': 'wion', 'youtube_id': 'UC_gUM8rL-Lrg6O3adPW9K1g', 'playlist_id': 'UU_gUM8rL-Lrg6O3adPW9K1g', 'url': 'https://www.youtube.com/@WION', 'coverage': 'national', 'color': '#2D9CDB'},
+])
+
+channels.to_csv('channels.csv', index=False, encoding='utf-8'')'

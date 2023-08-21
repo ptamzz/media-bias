@@ -1,0 +1,12 @@
+channels = pandas.DataFrame.from_records([
+    {'title': 'East Mojo', 'slug': 'east-mojo', 'youtube_id': 'UC3zMA8hCzeB8ldnFVGX1NFA', 'playlist_id': 'UU3zMA8hCzeB8ldnFVGX1NFA', 'url': 'https://www.youtube.com/@EastMojoOfficial', 'coverage': 'national', 'color': '#7F67BE'},
+    {'title': 'Mojo Story', 'slug': 'mojo-story', 'youtube_id': 'UCrdPiSPVW0rtRsI002BX8iw', 'playlist_id': 'UUrdPiSPVW0rtRsI002BX8iw', 'url': 'https://www.youtube.com/@mojostory', 'coverage': 'national', 'color': '#4F378B'},
+    {'title': 'News Laundry', 'slug': 'news-laundry', 'youtube_id': 'UCustbySVJGb659WDpdkeATg', 'playlist_id': 'UUustbySVJGb659WDpdkeATg', 'url': 'https://www.youtube.com/@newslaundry', 'coverage': 'national', 'color': '#F6EDFF'},
+    {'title': 'Channel 4 News', 'slug': 'channel-4-news', 'youtube_id': 'UCTrQ7HXWRRxr7OsOtodr2_w', 'playlist_id': 'UUTrQ7HXWRRxr7OsOtodr2_w', 'url': 'https://www.youtube.com/@Channel4News', 'coverage': 'international', 'color': '#7A7289'},
+    {'title': 'The Print', 'slug': 'the-print', 'youtube_id': 'UCuyRsHZILrU7ZDIAbGASHdA', 'playlist_id': 'UUuyRsHZILrU7ZDIAbGASHdA', 'url': 'ThePrintIndia', 'coverage': 'national', 'color': '#EC928E'},
+    {'title': 'BBC News India', 'slug': 'bbc-news-india', 'youtube_id': 'UCF4QKhPMP1JybbkIJzIayww', 'playlist_id': 'UUF4QKhPMP1JybbkIJzIayww', 'url': 'https://www.youtube.com/@bbcnewsindia', 'coverage': 'national', 'color': '#DC362E'},
+    {'title': 'Indian Express', 'slug': 'indianexpress', 'youtube_id': 'UCJEDFSxHHOW1PpBccdSxOTA', 'playlist_id': 'UUJEDFSxHHOW1PpBccdSxOTA', 'url': 'https://www.youtube.com/@indianexpress', 'coverage': 'national', 'color': '#219653'},
+    {'title': 'WION', 'slug': 'wion', 'youtube_id': 'UC_gUM8rL-Lrg6O3adPW9K1g', 'playlist_id': 'UU_gUM8rL-Lrg6O3adPW9K1g', 'url': 'https://www.youtube.com/@WION', 'coverage': 'national', 'color': '#2D9CDB'},
+])
+
+channels.to_csv('channels.csv', index=False, encoding='utf-8')
