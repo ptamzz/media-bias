@@ -1,9 +1,12 @@
 from IPython.display import clear_output
 from apiclient.discovery import build
+from datetime import datetime
 import pandas as pd
 
 API_KEY = open('google-api-key.txt', 'r').read()
 youtube_service = build('youtube', 'v3', developerKey=API_KEY)
+
+target_date = datetime(2023, 5, 3)
 
 def download_channel_videos(channel):
     """
@@ -16,6 +19,12 @@ def download_channel_videos(channel):
         response = youtube_service.playlistItems().list(playlistId=channel['playlist_id'], part="snippet", pageToken=pageToken).execute()
         """ response = youtube_service.playlistItems().list(playlistId="UUXIJgqnII2ZOINSWNOGFThA", part="snippet", pageToken=pageToken).execute()"""
         for video in response['items']:
+
+            published_at = datetime.strptime(video['snippet']['publishedAt'], '%Y-%m-%dT%H:%M:%SZ')
+    
+            if published_at < target_date:
+                break
+        
             videos.append({
                 'youtube_id': video['snippet']['resourceId']['videoId'],
                 'title': video['snippet']['title'],

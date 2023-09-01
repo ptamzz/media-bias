@@ -1,3 +1,4 @@
+import numpy as np
 import re
 import pandas as pd
 from IPython.display import HTML

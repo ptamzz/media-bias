@@ -15,4 +15,28 @@ channels = pandas.DataFrame.from_records([
     {'title': 'WION', 'slug': 'wion', 'youtube_id': 'UC_gUM8rL-Lrg6O3adPW9K1g', 'playlist_id': 'UU_gUM8rL-Lrg6O3adPW9K1g', 'url': 'https://www.youtube.com/@WION', 'coverage': 'national', 'color': '#2D9CDB'},
 ])
 
-channels.to_csv('channels.csv', index=False, encoding='utf-8'')'
+channels.to_csv('channels.csv', index=False, encoding='utf-8')
+
+
+channels = pd.DataFrame.from_records([
+    {'title': 'The Wire', 'slug': 'the-wire', 'youtube_id': 'UChWtJey46brNr7qHQpN6KLQ', 'playlist_id': 'UUhWtJey46brNr7qHQpN6KLQ', 'url': 'https://www.youtube.com/@TheWireNews', 'coverage': 'national', 'color': '#5975a4'},
+    {'title': 'India Today NE', 'slug': 'india-today-ne', 'youtube_id': 'UCg1nNKwJIeVUhxbtmqfVmgg', 'playlist_id': 'UUg1nNKwJIeVUhxbtmqfVmgg', 'url': 'https://www.youtube.com/@indiatodayne', 'coverage': 'national', 'color': '#EADDFF'},
+    {'title': 'East Mojo', 'slug': 'east-mojo', 'youtube_id': 'UC3zMA8hCzeB8ldnFVGX1NFA', 'playlist_id': 'UU3zMA8hCzeB8ldnFVGX1NFA', 'url': 'https://www.youtube.com/@EastMojoOfficial', 'coverage': 'national', 'color': '#7F67BE'},
+    {'title': 'Mojo Story', 'slug': 'mojo-story', 'youtube_id': 'UCrdPiSPVW0rtRsI002BX8iw', 'playlist_id': 'UUrdPiSPVW0rtRsI002BX8iw', 'url': 'https://www.youtube.com/@mojostory', 'coverage': 'national', 'color': '#4F378B'},
+    {'title': 'News Laundry', 'slug': 'news-laundry', 'youtube_id': 'UCustbySVJGb659WDpdkeATg', 'playlist_id': 'UUustbySVJGb659WDpdkeATg', 'url': 'https://www.youtube.com/@newslaundry', 'coverage': 'national', 'color': '#F6EDFF'},
+    {'title': 'BBC News India', 'slug': 'bbc-news-india', 'youtube_id': 'UCF4QKhPMP1JybbkIJzIayww', 'playlist_id': 'UUF4QKhPMP1JybbkIJzIayww', 'url': 'https://www.youtube.com/@bbcnewsindia', 'coverage': 'national', 'color': '#DC362E'},
+])
+
+
+
+import pandas as pd
+from code.youtube_api import download_channels_videos
+
+# Read channels.csv (adjust the file path if needed)
+channels = pd.read_csv('channels.csv')
+
+# Assuming 'slug' is a column in your channels data that provides a unique identifier for each channel
+channels['slug'] = channels['title'].str.lower().replace(' ', '-')
+
+# Call the function with the channels data
+download_channels_videos(channels)

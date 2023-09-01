@@ -5,3 +5,25 @@ topics = pandas.DataFrame.from_records([
 ])
 
 topics.to_csv('topics.csv', index=False, encoding='utf-8')
+
+
+
+topics = pd.DataFrame.from_records([
+    {'title': 'Meitei', 'slug': 'meitei', 'variant1': 'Meetei', 'variant2': 'Maiti', 'variant3': 'meiteis', 'variant4': 'Meiteis'},
+    {'title': 'Kuki', 'slug': 'kuki',   'variant1': 'kuki', 'variant2': 'cookie'},
+    {'title': 'Biren', 'slug': 'biren',   'variant1': 'biren', 'variant2': 'biren'},
+])
+
+topics.to_csv('topics.csv', index=False, encoding='utf-8')
+
+
+topics = pd.DataFrame.from_records([
+    {'title': 'Meitei', 'slug': 'meitei', 'variant1': 'Meetei', 'variant2': 'Maiti', 'variant3': 'meiteis', 'variant4': 'Meiteis'},
+    {'title': 'Kuki', 'slug': 'kuki',   'variant1': 'kuki', 'variant2': 'cookie', 'variant3': 'kukis', 'variant4': 'Kukis'},
+])
+
+
+topics = pd.DataFrame.from_records([
+    {'title': 'Meitei', 'slug': 'meitei', 'variant1': 'Meetei', 'variant2': 'meiteis'},
+    {'title': 'Kuki', 'slug': 'kuki',   'variant1': 'kuki', 'variant2': 'kukis'},
+])
